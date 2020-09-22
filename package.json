@@ -1,0 +1,84 @@
+{
+  "name": "andaluh-electron",
+  "version": "1.0.0",
+  "license": "GPLv3",
+  "productName": "Andaluh transcriptor",
+  "description": "Transliterate spanish spelling to andaluz proposals",
+  "main": "electron/main.js",
+  "author": {
+    "name": "Emilio Martinez Rivero",
+    "email": "emiliomartinezriv@gmail.com",
+    "url": "https://github.com/andalugeeks/andaluh-electron"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "@andalugeeks/andaluh": "^1.1.4",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "dotenv": "^8.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "build": {
+    "extends": null,
+    "appId": "org.andalugeeks",
+    "artifactName": "andaluh-transcriptor-${version}-${arch}.${ext}",
+    "icon": "electron/static",
+    "files": [
+      "electron/**/*",
+      "build/**/*"
+    ],
+    "linux": {
+      "description": "Andaluh transcriptor",
+      "category": "Utility",
+      "maintainer": "Emilio Martinez Rivero <emiliomartinezriv@gmail.com",
+      "executableName": "andaluh-transcriptor",
+      "target": [{
+          "target": "deb"
+        }, {
+          "target": "snap"
+        }, {
+          "target": "AppImage"
+        },
+        {
+          "target": "rpm"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "npm run build:react && npm run build:electron",
+    "build:electron": "electron-builder",
+    "build:react": "react-scripts build",
+    "lint:electron": "eslint electron/",
+    "lint:react": "eslint ./src/index.jsx",
+    "prebuild": "node tasks/prebuild.js",
+    "start:electron": "NODE_ENV=development nodemon node_modules/electron/cli.js electron/main.js",
+    "start:react": "react-scripts start",
+    "test:electron": "NODE_ENV=production electron electron/main.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "nodemon": "^2.0.4",
+    "react-scripts": "3.4.3"
+  }
+}
