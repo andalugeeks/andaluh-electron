@@ -2,6 +2,7 @@
 
 Transliterate español (spanish) spelling to andaluz electron app transcriptor.
 
+![app_image](https://user-images.githubusercontent.com/30650412/93900411-a3972480-fcf5-11ea-83ed-600805a35ba9.png)
 
 ## Table of Contents
 
