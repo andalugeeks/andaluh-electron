@@ -17,14 +17,14 @@ const Translator = (props) => {
   const [opened, setOpened] = useState(false);
   const [{ selectedDropdown, options, letter }, setState] = useState({
     selectedDropdown: 'Ç',
-    options: new Set(['S', 'Z', 'J']),
-    letter: 'J',
+    options: new Set(['S', 'Z', 'H']),
+    letter: 'H',
   });
 
   const onClickEPA = () => setState({
     selectedDropdown: 'Ç',
-    options: new Set(['S', 'Z', 'J']),
-    letter: 'J',
+    options: new Set(['S', 'Z', 'H']),
+    letter: 'H',
   });
 
   const toggle = () => {
@@ -52,7 +52,7 @@ const Translator = (props) => {
     setState({
       selectedDropdown,
       options,
-      letter: letter === 'J' ? 'H' : 'J',
+      letter: letter === 'H' ? 'J' : 'H',
     });
   };
 
@@ -90,7 +90,7 @@ const Translator = (props) => {
           title={title.andaluh}
           readOnly
           placeholder={translator.transcript(placeholder.castellano)}
-          value={translator.transcript(text, selectedDropdown.toLowerCase(), letter === 'J' ? 'h' : 'j')}
+          value={translator.transcript(text, selectedDropdown.toLowerCase(), letter === 'H' ? 'h' : 'j')}
         />
       </div>
     </div>
