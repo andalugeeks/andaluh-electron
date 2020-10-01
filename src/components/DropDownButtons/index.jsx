@@ -24,7 +24,7 @@ const DropDownButtons = (props) => {
       <Fab onClick={open} color="secondary">{selectedButton}</Fab>
       <ul className={activate ? classes.activate : classes.deactivate}>
         {extractArrayFromSet(buttons)
-          .map((button) => <li key={button}><Fab onClick={onClick}>{button}</Fab></li>)}
+          .map((button) => <li key={button}><Fab className="dropdown-button" onClick={onClick}>{button}</Fab></li>)}
       </ul>
     </div>
   );
