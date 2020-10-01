@@ -35,9 +35,11 @@
       "executableName": "andaluh-transcriptor",
       "target": [{
           "target": "deb"
-        }, {
+        },
+        {
           "target": "snap"
-        }, {
+        },
+        {
           "target": "AppImage"
         },
         {
@@ -50,8 +52,8 @@
     "build": "npm run build:react && npm run build:electron",
     "build:electron": "electron-builder",
     "build:react": "react-scripts build",
-    "lint:electron": "eslint electron/",
-    "lint:react": "eslint ./src/index.jsx",
+    "lint:electron": "eslint -c electron/.eslintrc electron/",
+    "lint:react": "eslint -c src/.eslintrc src/",
     "prebuild": "node tasks/prebuild.js",
     "start:electron": "NODE_ENV=development nodemon node_modules/electron/cli.js electron/main.js",
     "start:react": "react-scripts start",
