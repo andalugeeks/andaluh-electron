@@ -7,6 +7,7 @@ const {
   computedMaxHeight
 } = require('./lib/sizes');
 
+const { registerShortcuts } = require('./lib/shortcuts');
 require('dotenv').config();
 
 const { minHeight, minWidth, title } = require('./app.config.json');
@@ -50,6 +51,7 @@ const createWindow = () => {
 app.whenReady().then(() => {
   createWindow();
   Menu.setApplicationMenu(null);
+  registerShortcuts();
 });
 
 // Quit app when all windows are closed
