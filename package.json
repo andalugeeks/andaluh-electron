@@ -1,10 +1,14 @@
 {
   "name": "andaluh-electron",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "GPLv3",
   "productName": "Andaluh transcriptor",
   "description": "Transliterate spanish spelling to andaluz proposals",
   "main": "electron/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andalugeeks/andaluh-electron"
+  },
   "author": {
     "name": "Emilio Martinez Rivero",
     "email": "emiliomartinezriv@gmail.com",
