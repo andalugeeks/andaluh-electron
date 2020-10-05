@@ -31,7 +31,8 @@ const Translator = (props) => {
     setOpened(!opened);
   };
   const onBlur = (e) => {
-    if (!e.relatedTarget) {
+    const { relatedTarget } = e;
+    if (!relatedTarget || !(relatedTarget.classList.contains('dropdown-button'))) {
       setOpened(false);
     }
   };
