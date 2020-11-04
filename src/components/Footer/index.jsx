@@ -2,14 +2,14 @@ import React from 'react';
 import { Typography, withStyles } from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
 import {
-  GitHub, Instagram, Facebook, Twitter,
+  GitHub, Instagram, Facebook, Twitter, Android, Telegram, Keyboard, YouTube
 } from '@material-ui/icons';
 import IconLink from '../IconLink';
 import SlackIcon from '../SlackIcon';
 
 import style from './style';
 import {
-  github, slack, facebook, twitter, instagram,
+  github, slack, facebook, twitter, instagram, teclao, android, telegram, youtube
 } from './urls';
 
 const Footer = (props) => {
@@ -19,13 +19,16 @@ const Footer = (props) => {
       <Toolbar className={classes.content}>
         <div className={classes.iconContent}>
           <Typography>
-            OpenSource
+            Andalûh Apps
           </Typography>
-          <IconLink color="secondary" link={github}>
-            <GitHub />
+          <IconLink color="secondary" link={teclao}>
+            <Keyboard />
           </IconLink>
-          <IconLink color="secondary" link={slack}>
-            <SlackIcon />
+          <IconLink color="secondary" link={android}>
+            <Android />
+          </IconLink>
+          <IconLink color="secondary" link={telegram}>
+            <Telegram />
           </IconLink>
         </div>
         <div className={classes.iconContent}>
@@ -40,6 +43,20 @@ const Footer = (props) => {
           </IconLink>
           <IconLink color="secondary" link={twitter}>
             <Twitter />
+          </IconLink>
+          <IconLink color="secondary" link={youtube}>
+            <YouTube />
+          </IconLink>
+        </div>
+        <div className={classes.iconContent}>
+          <Typography>
+            OpenSource
+          </Typography>
+          <IconLink color="secondary" link={github}>
+            <GitHub />
+          </IconLink>
+          <IconLink color="secondary" link={slack}>
+            <SlackIcon />
           </IconLink>
         </div>
       </Toolbar>
