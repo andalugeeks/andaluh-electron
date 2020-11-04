@@ -31,7 +31,7 @@
     "linux": {
       "description": "Andaluh transcriptor",
       "category": "Utility",
-      "maintainer": "Emilio Martinez Rivero <emiliomartinezriv@gmail.com",
+      "maintainer": "Emilio Martinez Rivero <emiliomartinezriv@gmail.com>",
       "executableName": "andaluh-transcriptor",
       "target": [{
           "target": "deb"

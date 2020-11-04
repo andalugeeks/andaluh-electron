@@ -13,7 +13,7 @@ Transliterate español (spanish) spelling to andaluz electron app transcriptor.
   - [deb](#deb)
   - [rpm](#rpm)
   - [Snap](#snap)
-  - [appImage](#appimage)
+  - [AppImage](#appimage)
 - [Support](#support)
 - [Contributing](#contributing)
 
