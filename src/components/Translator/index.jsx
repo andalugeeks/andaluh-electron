@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { withStyles, Fab } from '@material-ui/core';
-import EPA from '@andalugeeks/andaluh';
+import { EPA } from '@andalugeeks/andaluh';
 
 import parameters from './parameters.json';
 import style from './style';
